@@ -128,15 +128,9 @@ const UpliftDAO = () => {
             <div  className="w-1/3 p-2 mr-4 my-10 text-xs font-bold text-center uppercase bg-android-green border-4 border-black pxl-lg">
                 <h3 className="my-4 font-bold text-center uppercase ">create a chort</h3>
                 <Flex p="2">
-                    <Input
-                        my="2"
-                        mr="2"
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    <input onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setName(e.target.value)
-                        }
-                        name={"name"}
-                        placeholder={"cohort name"}
-                    />
+                        } type="text" placeholder="cohort name" name="name" style={{ width: "420px" }} className="mr-6 border-4 border-black p-4 font-bold" />
                     <Box my="2">
 
                         <button  onClick={handleSubmit} className="p-2 mr-4 text-xs font-bold text-right uppercase bg-android-green border-4 border-black pxl-lg">

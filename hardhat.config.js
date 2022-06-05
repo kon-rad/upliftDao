@@ -29,20 +29,17 @@ module.exports = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com",
-      accounts: [process.env.PRIVATE_KEY || '']
-    },
-    matic: {
-      url: process.env.ALCHEMY_URL,
-      accounts: [process.env.PRIVATE_KEY || ''],
-    },
+    // mumbai: {
+    //   url: "https://rpc-mumbai.maticvigil.com",
+    //   accounts: [process.env.PRIVATE_KEY || '']
+    // },
+    // matic: {
+    //   url: process.env.ALCHEMY_URL,
+    //   accounts: [process.env.PRIVATE_KEY || ''],
+    // },
     alfajores: {
       url: "https://alfajores-forno.celo-testnet.org",
-      accounts: {
-        mnemonic: process.env.MNEMONIC,
-        path: "m/44'/52752'/0'/0"
-      },
+      accounts: [process.env.PRIVATE_KEY],
       chainId: 44787
     }
   },

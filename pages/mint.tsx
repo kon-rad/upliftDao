@@ -64,7 +64,9 @@ const Mint = () => {
                 </Box>
                 <Image borderRadius="xl" src="/images/2.png" height="300px" m={4}/>
                 <Box mb={12}>
-                    <Button>Mint</Button>
+                    <button  className="p-2 mr-4 text-xs font-bold text-right uppercase bg-android-green border-4 border-black pxl-lg">
+                        MINT
+                    </button>
                 </Box>
             </VStack>
         </>

@@ -91,14 +91,10 @@ const CreateForm = (props: Props) => {
                         >
                             {renderImage()}
                         </Box>
-                        
-                        <Button
-                            mb={4}
-                            colorScheme={'purple'}
-                            onClick={handleSubmit}
-                        >
+
+                        <button  onClick={handleSubmit} className="p-2 mr-4 text-xs font-bold text-right uppercase bg-android-green border-4 border-black pxl-lg">
                             MINT
-                        </Button>
+                        </button>
                     </Flex>
                 </Box>
             </Center>
