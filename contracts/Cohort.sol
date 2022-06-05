@@ -88,6 +88,10 @@ contract Cohort {
         sessionCount++;
     }
 
+    function getSessions() external view returns (Session[] memory) {
+        return sessions;
+    }
+
     function attestSession(uint256 _id, string memory _reflection) external onlyMember {
         require(sessions[_id].status == Status.Open, "session is not open");
         // todo: check if user has already attested

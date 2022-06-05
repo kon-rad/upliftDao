@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Box my="4" >
           <Center>
-            <Image width="200px" src="/images/logo.png"></Image>
+            <Image width="200px" src="/images/logo.png" borderRadius="xl" ></Image>
           </Center>
           <UpliftDAO />
       </Box>

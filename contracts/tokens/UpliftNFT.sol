@@ -8,7 +8,6 @@ contract UpliftNFT is ERC721URIStorage {
 
     uint256 public tokenId;
     string public baseTokenURI;
-    uint256 public price = 0.01 ether;
     uint256 public maxTokenIds = 10000;
     address public upliftDAO;
 
@@ -20,10 +19,8 @@ contract UpliftNFT is ERC721URIStorage {
 
     function mint() public payable {
         require(tokenId < maxTokenIds, "Exceeded max supply");
-        require(msg.value >= price, "Ether value not correct");
         _safeMint(msg.sender, tokenId);
         tokenId++;
-        payable(address(upliftDAO)).transfer(msg.value);
     }
 
     receive() external payable {}

@@ -7,6 +7,17 @@ const hre = require("hardhat");
 
 async function main() {
 
+  // const Market = await hre.ethers.getContractFactory('DLMarket');
+  // const market = await Market.deploy();
+  // await market.deployed();
+  // console.log('DLMarket deployed to: ', market.address);
+
+  // const NFT = await hre.ethers.getContractFactory('DLNFT');
+  // const nft = await NFT.deploy(market.address);
+  // await nft.deployed();
+  // console.log('DLNFT deployed to: ', nft.address);
+
+
   const nftBaseUrl = "https://ipfs.infura.io/ipfs/QmcSPtiT3vVQ7mgL1iWcnK3kcwjMmvxHec2qKxJXRvdyzE";
   const UpliftDAO = await hre.ethers.getContractFactory("UpliftDAO");
   const upliftDAO = await UpliftDAO.deploy(nftBaseUrl);

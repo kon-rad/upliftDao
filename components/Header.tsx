@@ -37,6 +37,13 @@ import {
           </NextLink>
         </LinkBox>
         <Spacer />
+          <NextLink href="/mint" passHref={true}>
+            <Flex align="center">
+            <button  className="p-2 mr-4 text-xs font-bold text-right uppercase bg-android-green border-4 border-black pxl-lg">
+                mint
+            </button>
+            </Flex>
+          </NextLink>
         <Box>
           <ConnectWallet />
         </Box>

@@ -5,6 +5,8 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { getProvider } from "../utils/web3";
 import { ethers } from "ethers";
 import Layout from "../components/Layout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const getLibrary = (provider: any) => {
   const library = new ethers.providers.Web3Provider(provider);
@@ -43,6 +45,17 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Layout>
               <Component {...pageProps} />
             </Layout>
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
           </ChakraProvider>
         </Web3ReactProvider>
     </div>

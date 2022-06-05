@@ -23,6 +23,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: rgb(0,127,95);
+  background: linear-gradient(39deg, rgba(0,127,95,1) 0%, rgba(128,185,24,1) 50%, rgba(238,239,32,1) 100%);
+}
+.chakra-ui-light {
+  background: rgb(0,127,95);
+  background: linear-gradient(39deg, rgba(0,127,95,1) 0%, rgba(128,185,24,1) 50%, rgba(238,239,32,1) 100%);
+  height: 1400px;
 }
 
 a {

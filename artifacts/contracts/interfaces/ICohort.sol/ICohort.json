@@ -48,6 +48,46 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "getSessions",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "enum Status",
+              "name": "status",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "reflection",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "membersCount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Session[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "address",

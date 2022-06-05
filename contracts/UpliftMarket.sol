@@ -15,7 +15,6 @@ contract UpliftMarket is ReentrancyGuard {
 
   constructor() {
     owner = payable(msg.sender);
-    console.log("UpliftMarket constructor is called with msg.sender:", msg.sender);
   }
 
   struct MarketItem {
@@ -103,7 +102,6 @@ contract UpliftMarket is ReentrancyGuard {
     uint itemCount = _itemIds.current();
     uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
     uint currentIndex = 0;
-    console.log("fetchMarketItems is called with unsoldItemCount:", unsoldItemCount);
 
     MarketItem[] memory items = new MarketItem[](unsoldItemCount);
     for (uint i = 0; i < itemCount; i++) {

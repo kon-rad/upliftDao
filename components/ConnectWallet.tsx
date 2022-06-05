@@ -112,7 +112,7 @@ const ConnectWallet = () => {
     }, []);
     
     return (
-        <Box mt={6}>
+        <Box>
             {!active ? (
                 <button  onClick={onOpen} className="p-2 mr-4 text-xs font-bold text-right uppercase bg-android-green border-4 border-black pxl-lg">
                     Connect Wallet

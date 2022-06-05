@@ -27,13 +27,20 @@ contract UpliftDAO {
     }
 
     modifier memberOnly() {
-        require(IERC721(nftAddress).balanceOf(msg.sender) > 0, "only for members");
+        // todo: commented out for demo purposes on hackathon
+        // require(IERC721(nftAddress).balanceOf(msg.sender) > 0, "only for members");
         _;
+    }
+
+    function getCohorts() external view returns (address[] memory) {
+        return cohortsArr;
     }
 
     function createCohort(string calldata _name) external memberOnly {
         require(cohortMembers[msg.sender] == 0, "already a member");
         address cohortAddr = address(new Cohort(cohortsCount, _name));
+        cohortIdToAddress[cohortsCount] = cohortAddr;
+        cohortsArr.push(cohortAddr);
         cohortsCount++;
     }
 

@@ -37,8 +37,8 @@
       ]
     },
     "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/Cohort.sol": {
-      "lastModificationDate": 1654391208472,
-      "contentHash": "de60e7efe1285347aa41d325701fd11c",
+      "lastModificationDate": 1654442061450,
+      "contentHash": "bddc3a9c0ce8c44c5121e8b645bd37e5",
       "sourceName": "contracts/Cohort.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -109,8 +109,8 @@
       ]
     },
     "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/UpliftDAO.sol": {
-      "lastModificationDate": 1654390884339,
-      "contentHash": "5faf94e92ae9c72cd2e9e3951068333a",
+      "lastModificationDate": 1654441653470,
+      "contentHash": "97af3e389f91a9f9f80c874f38e149b3",
       "sourceName": "contracts/UpliftDAO.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -151,8 +151,8 @@
       ]
     },
     "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/tokens/UpliftNFT.sol": {
-      "lastModificationDate": 1654390152507,
-      "contentHash": "f5d51ab76f734f95bc94095915c6542a",
+      "lastModificationDate": 1654439446611,
+      "contentHash": "0c65060829eb9ac39ab3eb6235e88a38",
       "sourceName": "contracts/tokens/UpliftNFT.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -226,8 +226,8 @@
       ]
     },
     "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/interfaces/ICohort.sol": {
-      "lastModificationDate": 1654391218413,
-      "contentHash": "ed8fa711848a6501655b7238d7bbe1e2",
+      "lastModificationDate": 1654442112391,
+      "contentHash": "4c71a5c554ce2afe101cbd77120db488",
       "sourceName": "contracts/interfaces/ICohort.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -735,6 +735,154 @@
       ],
       "artifacts": [
         "IERC20Metadata"
+      ]
+    },
+    "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/UpliftNFTM.sol": {
+      "lastModificationDate": 1654437823389,
+      "contentHash": "666b1fc54954fa35c6538ee276e72eb6",
+      "sourceName": "contracts/UpliftNFTM.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "UpliftNFTM"
+      ]
+    },
+    "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1654360794801,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/contracts/UpliftMarket.sol": {
+      "lastModificationDate": 1654437819146,
+      "contentHash": "5e07c96bd9f847f8900d14ff3fc1f474",
+      "sourceName": "contracts/UpliftMarket.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "UpliftMarket"
+      ]
+    },
+    "/Users/konradgnat/dev/hackathons/graphhack2022/wholeEarthDAO/upliftDao/upliftdao/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1654360794801,
+      "contentHash": "92f9448b23a90ea3bb932ee55cc3ccce",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
       ]
     }
   }
