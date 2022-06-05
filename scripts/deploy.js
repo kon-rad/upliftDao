@@ -6,20 +6,28 @@
 const hre = require("hardhat");
 
 async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
-  // line interface.
-  //
-  // If this script is run directly using `node` you may want to call compile
-  // manually to make sure everything is compiled
-  // await hre.run('compile');
 
-  // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const nftBaseUrl = "https://ipfs.infura.io/ipfs/QmcSPtiT3vVQ7mgL1iWcnK3kcwjMmvxHec2qKxJXRvdyzE";
+  const UpliftDAO = await hre.ethers.getContractFactory("UpliftDAO");
+  const upliftDAO = await UpliftDAO.deploy(nftBaseUrl);
 
-  await greeter.deployed();
+  await upliftDAO.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("upliftDAO deployed to:", upliftDAO.address);
+
+  // const UpliftNFT = await hre.ethers.getContractFactory("UpliftNFT");
+  // const upliftNFT = await UpliftNFT.deploy("Hello, Hardhat!");
+
+  // await upliftNFT.deployed();
+
+  // console.log("UpliftNFT deployed to:", upliftNFT.address);
+
+  // const UpliftToken = await hre.ethers.getContractFactory("UpliftToken");
+  // const upliftToken = await UpliftToken.deploy("Hello, Hardhat!");
+
+  // await upliftToken.deployed();
+
+  // console.log("upliftToken deployed to:", upliftToken.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

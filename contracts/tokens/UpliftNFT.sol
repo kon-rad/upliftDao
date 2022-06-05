@@ -10,11 +10,11 @@ contract UpliftNFT is ERC721URIStorage {
     string public baseTokenURI;
     uint256 public price = 0.01 ether;
     uint256 public maxTokenIds = 10000;
-    address public upliftDao;
+    address public upliftDAO;
 
-    constructor(string memory _baseURI, address _upliftDao) ERC721("Uplift DAO", "UPD") {
-        baseTokenUR = _baseURI;
-        upliftDao = _upliftDao;
+    constructor(string memory _baseURI) ERC721("Uplift DAO", "UPD") {
+        baseTokenURI = _baseURI;
+        upliftDAO = msg.sender;
         tokenId = 0;
     }
 
@@ -23,9 +23,9 @@ contract UpliftNFT is ERC721URIStorage {
         require(msg.value >= price, "Ether value not correct");
         _safeMint(msg.sender, tokenId);
         tokenId++;
-        payable(address(upliftDao)).transfer(msg.value);
+        payable(address(upliftDAO)).transfer(msg.value);
     }
-    
+
     receive() external payable {}
     fallback() external payable {}
 }

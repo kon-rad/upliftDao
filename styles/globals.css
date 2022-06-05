@@ -1,3 +1,18 @@
+:root {
+  /* CSS HEX */
+  /* // https://coolors.co/palette/007f5f-2b9348-55a630-80b918-aacc00-bfd200-d4d700-dddf00-eeef20-ffff3f */
+  --spanish-viridian: #007f5fff;
+  --spanish-green: #2b9348ff;
+  --green-ryb: #55a630ff;
+  --apple-green: #80b918ff;
+  --android-green: #aacc00ff;
+  --bitter-lemon: #bfd200ff;
+  --pear: #d4d700ff;
+  --titanium-yellow: #dddf00ff;
+  --xanthic: #eeef20ff;
+  --yellow-ryb: #ffff3fff;
+}
+
 html,
 body {
   padding: 0;

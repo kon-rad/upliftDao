@@ -1,14 +1,19 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
+import "./interfaces/IUpliftDAO.sol";
+
 contract Cohort {
 
     uint256 public id;
+    uint256 public sessionCount = 0;
     string public name;
-    string public mission;
     address public dao;
+    string public sessionDayAndTime;
     address[] public members;
     mapping(address => uint256) memberJoinDate;
+    Session[] sessions;
+    mapping(uint256 => address[]) sessionToAttestations;
 
     enum Status {
         Open,
@@ -17,16 +22,16 @@ contract Cohort {
     }
 
     struct Session {
+        uint256 id;
         string date;
         Status status;
         string reflection;
-        address[] attestations;
+        uint256 membersCount;
     }
 
-    constructor(uint256 _id, string memory _name, string memory _mission) {
+    constructor(uint256 _id, string memory _name) {
         id = _id;
         name = _name;
-        mission = _mission;
         dao = msg.sender;
     }
 
@@ -39,13 +44,13 @@ contract Cohort {
         _;
     }
 
-    function join() public onlyDAO {
+    function join(address _subject) external onlyDAO {
         require(members.length <= 7, "cohort is full");
-        members.push(msg.sender);
-        memberJoinDate[msg.sender] = block.timestamp;
+        members.push(_subject);
+        memberJoinDate[_subject] = block.timestamp;
     }
 
-    function leave(address _subject) public onlyDAO {
+    function leave(address _subject) external onlyDAO {
         require(memberJoinDate[_subject] != 0, "is not a member");
         require(memberJoinDate[_subject] + 90 days < block.timestamp, "00 days minimum");
         delete memberJoinDate[_subject];
@@ -62,16 +67,36 @@ contract Cohort {
         }
     }
 
-    // set meeting day
-    // set cohort join date per member
-    // create meeting statement
-    // get reward for meeting with all members
+    function setMeetingDayAndTime(string memory _sessionDayAndTime) external onlyMember {
+        sessionDayAndTime = _sessionDayAndTime;
+    }
 
-    function getMembers() public view returns (address[] memory) {
+    function getMembers() external view returns (address[] memory) {
         return members;
     }
 
-    function createSession() public onlyMember {
+    function createSession(string memory _date) external onlyMember {
+        sessions.push(Session({
+            id: sessionCount,
+            date: _date,
+            status: Status.Open,
+            reflection: "",
+            membersCount: members.length
+        }));
+        address[] memory attestations;
+        sessionToAttestations[sessionCount] = attestations;
+        sessionCount++;
+    }
 
+    function attestSession(uint256 _id, string memory _reflection) external onlyMember {
+        require(sessions[_id].status == Status.Open, "session is not open");
+        // todo: check if user has already attested
+        sessionToAttestations[_id].push(msg.sender);
+        if (sessionToAttestations[_id].length == members.length) {
+            sessions[_id].status = Status.Completed;
+            // todo: find another way to set reflection than last person to attest
+            sessions[_id].reflection = _reflection;
+            IUpliftDAO(dao).rewardCohort();
+        }
     }
 }
