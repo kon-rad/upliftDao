@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* CSS HEX */
   /* // https://coolors.co/palette/007f5f-2b9348-55a630-80b918-aacc00-bfd200-d4d700-dddf00-eeef20-ffff3f */
@@ -28,4 +32,67 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.color-spanish-viridian {
+  color: var(--spanish-viridian);
+}
+.color-spanish-green {
+  color: var(--spanish-green);
+}
+.color-green-ryb {
+  color: var(--green-ryb);
+}
+.color-apple-green {
+  color: var(--apple-green);
+}
+.color-android-green {
+  color: var(--android-green);
+}
+.color-bitter-lemon {
+  color: var(--bitter-lemon);
+}
+.color-pear {
+  color: var(--pear);
+}
+.color-titanium-yellow {
+  color: var(--titanium-yellow);
+}
+.color-xanthic {
+  color: var(--xanthic);
+}
+.color-yellow-ryb {
+  color: var(--yellow-ryb);
+}
+
+
+.bg-spanish-viridian {
+  background-color: var(--spanish-viridian);
+}
+.bg-spanish-green {
+  background-color: var(--spanish-green);
+}
+.bg-green-ryb {
+  background-color: var(--green-ryb);
+}
+.bg-apple-green {
+  background-color: var(--apple-green);
+}
+.bg-android-green {
+  background-color: var(--android-green);
+}
+.bg-bitter-lemon {
+  background-color: var(--bitter-lemon);
+}
+.bg-pear {
+  background-color: var(--pear);
+}
+.bg-titanium-yellow {
+  background-color: var(--titanium-yellow);
+}
+.bg-xanthic {
+  background-color: var(--xanthic);
+}
+.bg-yellow-ryb {
+  background-color: var(--yellow-ryb);
 }
