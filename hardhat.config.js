@@ -31,19 +31,19 @@ module.exports = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    // mumbai: {
-    //   url: "https://rpc-mumbai.maticvigil.com",
-    //   accounts: [process.env.PRIVATE_KEY || '']
-    // },
-    // matic: {
-    //   url: process.env.ALCHEMY_URL,
-    //   accounts: [process.env.PRIVATE_KEY || ''],
-    // },
-    // alfajores: {
-    //   url: "https://alfajores-forno.celo-testnet.org",
-    //   accounts: [process.env.PRIVATE_KEY],
-    //   chainId: 44787
-    // },
+    mumbai: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: [process.env.PRIVATE_KEY || '']
+    },
+    matic: {
+      url: process.env.ALCHEMY_URL,
+      accounts: [process.env.PRIVATE_KEY || ''],
+    },
+    alfajores: {
+      url: "https://alfajores-forno.celo-testnet.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 44787
+    },
     celo: {
       url: "https://forno.celo.org",
       accounts: [process.env.PRIVATE_KEY],
@@ -60,8 +60,7 @@ module.exports = {
   namedAccounts: {
     deployer: {
       celo: "0xD333b1E7D31702458c818963f21a731fE830EA19",
-      alfajores: "0xD333b1E7D31702458c818963f21a731fE830EA19"
-      // alfajores: "0xE1050a18435e64456B6Af57eB93721Ff22858Ef9"
+      alfajores: "0xE1050a18435e64456B6Af57eB93721Ff22858Ef9"
     }
   }
 };
